@@ -330,9 +330,20 @@
                 ● AI inference runs locally
             </span>
 
-            <button id="analyzeButton" onclick="analyzeJournal()">
-                Analyze Locally →
-            </button>
+         <button
+    id="analyzeButton"
+    onclick="analyzeJournal()"
+>
+    Analyze Locally →
+</button>
+
+<button
+    type="button"
+    onclick="clearJournal()"
+    style="margin-left: 10px;"
+>
+    Clear
+</button>
 
         </div>
 
@@ -362,12 +373,9 @@
 
             <h2>Journal History</h2>
 
-            <button
-                class="clear-button"
-                onclick="clearHistory()"
-            >
-                Clear History
-            </button>
+            <button onclick="clearHistory()">
+    Clear History
+</button>
 
         </div>
 
@@ -460,21 +468,19 @@ function escapeHTML(text) {
 }
 
 
+function clearJournal() {
+    document.getElementById("journal").value = "";
+    document.getElementById("journal").focus();
+}
+
 function clearHistory() {
-
     if (!confirm("Clear all local journal history?")) {
-
         return;
-
     }
 
     localStorage.removeItem("localMoodHistory");
-
     displayHistory();
-
 }
-
-
 async function analyzeJournal() {
 
     const journal =
