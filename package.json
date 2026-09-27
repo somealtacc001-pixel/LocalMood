@@ -1,14 +1,21 @@
 {
   "name": "localmood",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A private local AI journaling app powered by Tether's QVAC SDK.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "node test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "qvac",
+    "local-ai",
+    "journal",
+    "privacy",
+    "ai"
+  ],
+  "author": "Sakshyam K.C.",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@qvac/sdk": "^0.20.0",
